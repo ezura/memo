@@ -17,6 +17,18 @@
 		FF54594C1B3D20D600747C07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF54594B1B3D20D600747C07 /* Images.xcassets */; };
 		FF54594F1B3D20D600747C07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF54594D1B3D20D600747C07 /* LaunchScreen.xib */; };
 		FF54595B1B3D20D600747C07 /* memoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54595A1B3D20D600747C07 /* memoTests.m */; };
+		FF54596B1B3E8AEE00747C07 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596A1B3E8AEE00747C07 /* opencv2.framework */; };
+		FF54596D1B3E8CB300747C07 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596C1B3E8CB300747C07 /* Accelerate.framework */; };
+		FF54596F1B3E8CBB00747C07 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596E1B3E8CBB00747C07 /* AssetsLibrary.framework */; };
+		FF5459711B3E8CC500747C07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5459701B3E8CC500747C07 /* AVFoundation.framework */; };
+		FF5459731B3E8CCD00747C07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5459721B3E8CCD00747C07 /* CoreGraphics.framework */; };
+		FF5459751B3E8CD700747C07 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5459741B3E8CD700747C07 /* CoreImage.framework */; };
+		FF5459771B3E8CE600747C07 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5459761B3E8CE600747C07 /* CoreMedia.framework */; };
+		FF5459791B3E8CEF00747C07 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5459781B3E8CEF00747C07 /* CoreVideo.framework */; };
+		FF54597B1B3E8CF900747C07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597A1B3E8CF900747C07 /* QuartzCore.framework */; };
+		FF54597D1B3E8D0100747C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597C1B3E8D0100747C07 /* UIKit.framework */; };
+		FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597E1B3E8D0800747C07 /* Foundation.framework */; };
+		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +62,18 @@
 		FF5459541B3D20D600747C07 /* memoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5459591B3D20D600747C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF54595A1B3D20D600747C07 /* memoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memoTests.m; sourceTree = "<group>"; };
+		FF54596A1B3E8AEE00747C07 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Frameworks/opencv2.framework; sourceTree = "<group>"; };
+		FF54596C1B3E8CB300747C07 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		FF54596E1B3E8CBB00747C07 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		FF5459701B3E8CC500747C07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FF5459721B3E8CCD00747C07 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FF5459741B3E8CD700747C07 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		FF5459761B3E8CE600747C07 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FF5459781B3E8CEF00747C07 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		FF54597A1B3E8CF900747C07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FF54597C1B3E8D0100747C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FF54597E1B3E8D0800747C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +81,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */,
+				FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */,
+				FF54597D1B3E8D0100747C07 /* UIKit.framework in Frameworks */,
+				FF54597B1B3E8CF900747C07 /* QuartzCore.framework in Frameworks */,
+				FF5459791B3E8CEF00747C07 /* CoreVideo.framework in Frameworks */,
+				FF5459771B3E8CE600747C07 /* CoreMedia.framework in Frameworks */,
+				FF5459751B3E8CD700747C07 /* CoreImage.framework in Frameworks */,
+				FF5459731B3E8CCD00747C07 /* CoreGraphics.framework in Frameworks */,
+				FF5459711B3E8CC500747C07 /* AVFoundation.framework in Frameworks */,
+				FF54596F1B3E8CBB00747C07 /* AssetsLibrary.framework in Frameworks */,
+				FF54596D1B3E8CB300747C07 /* Accelerate.framework in Frameworks */,
 				1B26A16D515A3D2261F5B460 /* Pods_memo.framework in Frameworks */,
+				FF54596B1B3E8AEE00747C07 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +111,18 @@
 		8A72F890B0B4D04F2633DA77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */,
+				FF54597E1B3E8D0800747C07 /* Foundation.framework */,
+				FF54597C1B3E8D0100747C07 /* UIKit.framework */,
+				FF54597A1B3E8CF900747C07 /* QuartzCore.framework */,
+				FF5459781B3E8CEF00747C07 /* CoreVideo.framework */,
+				FF5459761B3E8CE600747C07 /* CoreMedia.framework */,
+				FF5459741B3E8CD700747C07 /* CoreImage.framework */,
+				FF5459721B3E8CCD00747C07 /* CoreGraphics.framework */,
+				FF5459701B3E8CC500747C07 /* AVFoundation.framework */,
+				FF54596E1B3E8CBB00747C07 /* AssetsLibrary.framework */,
+				FF54596C1B3E8CB300747C07 /* Accelerate.framework */,
+				FF54596A1B3E8AEE00747C07 /* opencv2.framework */,
 				37E279ADA0082728EF81FF67 /* Pods_memo.framework */,
 				028E6B66EFC993930FC74D05 /* Pods_memoTests.framework */,
 			);
@@ -483,6 +531,11 @@
 			baseConfigurationReference = A53147AD0E00F1AA73ED1981 /* Pods-memo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ezura/Downloads,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -494,6 +547,11 @@
 			baseConfigurationReference = 0F683FAF21CBD9D6C5D523CB /* Pods-memo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/ezura/Downloads,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = memo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
