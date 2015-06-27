@@ -74,6 +74,8 @@
 		FF54597C1B3E8D0100747C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF54597E1B3E8D0800747C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
+		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		FF54593A1B3D20D600747C07 /* memo */ = {
 			isa = PBXGroup;
 			children = (
+				FFBDDFAA1B3E9523007DC84B /* Util */,
 				FF54593F1B3D20D600747C07 /* AppDelegate.h */,
 				FF5459401B3D20D600747C07 /* AppDelegate.m */,
 				FF5459451B3D20D600747C07 /* ViewController.h */,
@@ -181,6 +184,7 @@
 			children = (
 				FF54593C1B3D20D600747C07 /* Info.plist */,
 				FF54593D1B3D20D600747C07 /* main.m */,
+				FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -200,6 +204,14 @@
 				FF5459591B3D20D600747C07 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FFBDDFAA1B3E9523007DC84B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FFBDDFAB1B3E9589007DC84B /* DebugLog.h */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +483,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "memo/memo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -513,6 +526,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "memo/memo-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
