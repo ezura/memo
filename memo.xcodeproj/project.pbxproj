@@ -28,6 +28,9 @@
 		FF54597B1B3E8CF900747C07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597A1B3E8CF900747C07 /* QuartzCore.framework */; };
 		FF54597D1B3E8D0100747C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597C1B3E8D0100747C07 /* UIKit.framework */; };
 		FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597E1B3E8D0800747C07 /* Foundation.framework */; };
+		FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */; };
+		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
+		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,11 @@
 		FF54597A1B3E8CF900747C07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FF54597C1B3E8D0100747C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF54597E1B3E8D0800747C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddInformationViewController.h; path = AddInformation/AddInformationViewController.h; sourceTree = "<group>"; };
+		FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddInformationViewController.m; path = AddInformation/AddInformationViewController.m; sourceTree = "<group>"; };
+		FF6303FD1B3EE13F00FD3CBC /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
+		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
+		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
 		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
@@ -147,6 +155,7 @@
 			children = (
 				FF54593A1B3D20D600747C07 /* memo */,
 				FF5459571B3D20D600747C07 /* memoTests */,
+				FF6303FC1B3EE13F00FD3CBC /* Resources */,
 				FF5459391B3D20D600747C07 /* Products */,
 				C8AE1F3F8A6ECA4F12DE1D4E /* Pods */,
 				8A72F890B0B4D04F2633DA77 /* Frameworks */,
@@ -165,6 +174,7 @@
 		FF54593A1B3D20D600747C07 /* memo */ = {
 			isa = PBXGroup;
 			children = (
+				FF6303F81B3ED3FF00FD3CBC /* Analyse */,
 				FFBDDFAA1B3E9523007DC84B /* Util */,
 				FF54593F1B3D20D600747C07 /* AppDelegate.h */,
 				FF5459401B3D20D600747C07 /* AppDelegate.m */,
@@ -204,6 +214,26 @@
 				FF5459591B3D20D600747C07 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF6303F81B3ED3FF00FD3CBC /* Analyse */ = {
+			isa = PBXGroup;
+			children = (
+				FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */,
+				FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */,
+				FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */,
+				FF6304001B3EE54500FD3CBC /* DrawLayerView.m */,
+			);
+			name = Analyse;
+			sourceTree = "<group>";
+		};
+		FF6303FC1B3EE13F00FD3CBC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FF6303FD1B3EE13F00FD3CBC /* sample.jpg */,
+			);
+			name = Resources;
+			path = memo/Resources;
 			sourceTree = "<group>";
 		};
 		FFBDDFAA1B3E9523007DC84B /* Util */ = {
@@ -303,6 +333,7 @@
 				FF54594A1B3D20D600747C07 /* Main.storyboard in Resources */,
 				FF54594F1B3D20D600747C07 /* LaunchScreen.xib in Resources */,
 				FF54594C1B3D20D600747C07 /* Images.xcassets in Resources */,
+				FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,8 +444,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
 				FF54593E1B3D20D600747C07 /* main.m in Sources */,
+				FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */,
 				FF5459471B3D20D600747C07 /* ViewController.m in Sources */,
 				FF5459441B3D20D600747C07 /* memo.xcdatamodeld in Sources */,
 			);

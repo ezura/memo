@@ -20,4 +20,6 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import "DebugLog.h"
+// FIXME: 全部読み込まれてしまうので後で各ファイルに記述
+#import <PromiseKit/PromiseKit.h>
 #endif
