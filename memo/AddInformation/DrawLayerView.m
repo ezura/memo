@@ -9,61 +9,10 @@
 #import "DrawLayerView.h"
 
 @implementation DrawLayerView
-{
-    UIBezierPath *bezierPath;
-}
-
-- (id)init {
-    self = [super self];
-    if (self) {
-        self.userInteractionEnabled = YES;
-    }
-    return self;
-}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    CGPoint currentPoint = [[touches anyObject] locationInView:self];
-    bezierPath = [UIBezierPath bezierPath];
-    bezierPath.lineCapStyle = kCGLineCapRound;
-    bezierPath.lineWidth = 4.0;
-    [bezierPath moveToPoint:currentPoint];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    if (bezierPath == nil){
-        return;
-    }
-    CGPoint currentPoint = [[touches anyObject] locationInView:self];
-
-    [bezierPath addLineToPoint:currentPoint];
-    
-    [self drawLine:bezierPath];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    if (bezierPath == nil){
-        return;
-    }
-    CGPoint currentPoint = [[touches anyObject] locationInView:self];
-    [bezierPath addLineToPoint:currentPoint];
-    [self drawLine:bezierPath];
-}
-
-- (void)drawLine:(UIBezierPath*)path
-{
-    UIGraphicsBeginImageContext(self.frame.size);
-    [[UIColor blackColor] setStroke];
-    [path stroke];
-    self.image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
 }
 
 @end

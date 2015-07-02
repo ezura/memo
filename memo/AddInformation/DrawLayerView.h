@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawLayerView : UIImageView
+@interface DrawLayerView : UIView
 
 @end
