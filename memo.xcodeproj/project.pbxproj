@@ -30,7 +30,10 @@
 		FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */; };
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
+		FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7644771B48C5F200211B12 /* DishItemViewController.m */; };
+		FF76447A1B48C5F200211B12 /* DishItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7644781B48C5F200211B12 /* DishItemViewController.xib */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
+		FFC450671B455F18005C0CB7 /* ColorAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,9 +81,14 @@
 		FF6303FD1B3EE13F00FD3CBC /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
 		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
+		FF7644761B48C5F200211B12 /* DishItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishItemViewController.h; path = AddInformation/DishItemViewController.h; sourceTree = "<group>"; };
+		FF7644771B48C5F200211B12 /* DishItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishItemViewController.m; path = AddInformation/DishItemViewController.m; sourceTree = "<group>"; };
+		FF7644781B48C5F200211B12 /* DishItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DishItemViewController.xib; path = AddInformation/DishItemViewController.xib; sourceTree = "<group>"; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
 		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
+		FFC450651B455F18005C0CB7 /* ColorAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorAnalyzer.h; path = Analyzer/ColorAnalyzer.h; sourceTree = "<group>"; };
+		FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ColorAnalyzer.mm; path = Analyzer/ColorAnalyzer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +182,9 @@
 				FF54593F1B3D20D600747C07 /* AppDelegate.h */,
 				FF5459401B3D20D600747C07 /* AppDelegate.m */,
 				FF5459481B3D20D600747C07 /* Main.storyboard */,
+				FFC450691B455F29005C0CB7 /* Analyze */,
 				FFBDDFAA1B3E9523007DC84B /* Util */,
-				FF6303F81B3ED3FF00FD3CBC /* Analyse */,
+				FF6303F81B3ED3FF00FD3CBC /* EditInformation */,
 				FF54594B1B3D20D600747C07 /* Images.xcassets */,
 				FF54594D1B3D20D600747C07 /* LaunchScreen.xib */,
 				FF5459421B3D20D600747C07 /* memo.xcdatamodeld */,
@@ -211,15 +220,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FF6303F81B3ED3FF00FD3CBC /* Analyse */ = {
+		FF6303F81B3ED3FF00FD3CBC /* EditInformation */ = {
 			isa = PBXGroup;
 			children = (
+				FFC4506A1B4612DC005C0CB7 /* dish */,
 				FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */,
 				FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */,
-				FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */,
-				FF6304001B3EE54500FD3CBC /* DrawLayerView.m */,
 			);
-			name = Analyse;
+			name = EditInformation;
 			sourceTree = "<group>";
 		};
 		FF6303FC1B3EE13F00FD3CBC /* Resources */ = {
@@ -237,6 +245,27 @@
 				FFBDDFAB1B3E9589007DC84B /* DebugLog.h */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		FFC450691B455F29005C0CB7 /* Analyze */ = {
+			isa = PBXGroup;
+			children = (
+				FFC450651B455F18005C0CB7 /* ColorAnalyzer.h */,
+				FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */,
+			);
+			name = Analyze;
+			sourceTree = "<group>";
+		};
+		FFC4506A1B4612DC005C0CB7 /* dish */ = {
+			isa = PBXGroup;
+			children = (
+				FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */,
+				FF6304001B3EE54500FD3CBC /* DrawLayerView.m */,
+				FF7644761B48C5F200211B12 /* DishItemViewController.h */,
+				FF7644771B48C5F200211B12 /* DishItemViewController.m */,
+				FF7644781B48C5F200211B12 /* DishItemViewController.xib */,
+			);
+			name = dish;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +359,7 @@
 				FF54594F1B3D20D600747C07 /* LaunchScreen.xib in Resources */,
 				FF54594C1B3D20D600747C07 /* Images.xcassets in Resources */,
 				FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */,
+				FF76447A1B48C5F200211B12 /* DishItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +471,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
+				FFC450671B455F18005C0CB7 /* ColorAnalyzer.mm in Sources */,
+				FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
 				FF54593E1B3D20D600747C07 /* main.m in Sources */,
 				FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */,
