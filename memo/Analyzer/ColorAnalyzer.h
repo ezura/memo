@@ -10,4 +10,7 @@
 
 @interface ColorAnalyzer : NSObject
 
+void createMaskFromContour(const cv::Mat &contour, cv::Mat &output);
+cv::Mat matWithImage(UIImage* image);
+
 @end
