@@ -32,6 +32,7 @@
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.mm */; };
 		FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7644771B48C5F200211B12 /* DishItemViewController.m */; };
 		FF76447A1B48C5F200211B12 /* DishItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7644781B48C5F200211B12 /* DishItemViewController.xib */; };
+		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
 		FFC450671B455F18005C0CB7 /* ColorAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		FF7644761B48C5F200211B12 /* DishItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishItemViewController.h; path = AddInformation/DishItemViewController.h; sourceTree = "<group>"; };
 		FF7644771B48C5F200211B12 /* DishItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishItemViewController.m; path = AddInformation/DishItemViewController.m; sourceTree = "<group>"; };
 		FF7644781B48C5F200211B12 /* DishItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DishItemViewController.xib; path = AddInformation/DishItemViewController.xib; sourceTree = "<group>"; };
+		FF76447B1B4B999E00211B12 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
 		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */,
 				FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */,
 				FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */,
 				FF54597D1B3E8D0100747C07 /* UIKit.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		8A72F890B0B4D04F2633DA77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF76447B1B4B999E00211B12 /* libc++.dylib */,
 				FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */,
 				FF54597E1B3E8D0800747C07 /* Foundation.framework */,
 				FF54597C1B3E8D0100747C07 /* UIKit.framework */,

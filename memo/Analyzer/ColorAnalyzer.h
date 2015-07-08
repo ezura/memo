@@ -8,8 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSUInteger {
+    ImageAnalyzeErrorNone,
+    ImageAnalyzeErrorArgumentError,
+    ImageAnalyzeErrorUnusableResult
+} ImageAnalyzeError;
+
 @interface ColorAnalyzer : NSObject
 
+cv::Rect computeContourRange(const cv::Mat &contourImage);
 void createMaskFromContour(const cv::Mat &contour, cv::Mat &output);
 cv::Mat matWithImage(UIImage* image);
 

@@ -70,15 +70,17 @@
     UIImage *image = self.image;
     UIImage *image1 = MatToUIImage(test);
     cv::Mat output;
-    createMaskFromContour(test, output);
+//    createMaskFromContour(test, output);
     
-    cv::Mat dst = cv::Mat::zeros(output.rows, output.cols, CV_8UC4);
+    cv::Rect selectedRange = computeContourRange(test);
     
-    UIImageView *originImage = [[UIImageView alloc] initWithFrame:self.frame];
-    originImage.image = [UIImage imageNamed:@"sample.jpg"];
-    cv::Mat originMatImage = [DrawLayerView matWithImage:[DrawLayerView imageWithView:originImage]];
-    originMatImage.copyTo(dst, output);
-    UIImage *image2 = MatToUIImage(dst);
+//    cv::Mat dst = cv::Mat::zeros(output.rows, output.cols, CV_8UC4);
+//    
+//    UIImageView *originImage = [[UIImageView alloc] initWithFrame:self.frame];
+//    originImage.image = [UIImage imageNamed:@"sample.jpg"];
+//    cv::Mat originMatImage = [DrawLayerView matWithImage:[DrawLayerView imageWithView:originImage]];
+//    originMatImage.copyTo(dst, output);
+//    UIImage *image2 = MatToUIImage(dst);
 }
 
 + (UIImage *) imageWithView:(UIView *)view

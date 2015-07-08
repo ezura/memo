@@ -33,7 +33,7 @@ cv::Mat matWithImage(UIImage* image)
 }
 
 
-void computeContour(const cv::Mat &contourImage, vector<vector<cv::Point>> &contours, vector<Vec4i> hierarchy)
+void computeContour(const cv::Mat &contourImage, vector<vector<cv::Point>> &contours, vector<Vec4i> &hierarchy, ImageAnalyzeError *error = nullptr)
 {
     // 輪郭抽出可能な形式に変換
     cv::Mat analizableImage;
@@ -53,43 +53,34 @@ void computeContour(const cv::Mat &contourImage, vector<vector<cv::Point>> &cont
     
     if (contours.size() < 2 /* 外側を含めて数える */) {
         LOG_PRINTF_C("can't find contour");
+        if (error != nullptr) {
+            *error = ImageAnalyzeErrorUnusableResult;
+        }
         return;
     }
     
     return;
 }
 
-void computeContourRange(const cv::Mat &contourImage)
+cv::Rect computeContourRange(const cv::Mat &contourImage)
 {
-    vector<vector<cv::Point> > contours;
+    vector<vector<cv::Point>> contours;
     vector<Vec4i> hierarchy;
-    computeContour(contourImage, contours, hierarchy);
+    ImageAnalyzeError error;
+    computeContour(contourImage, contours, hierarchy, &error);
     
-    
+    cv::Rect contourBoundingRect = boundingRect(contours[1]);
+    return contourBoundingRect;
 }
 
-void createMaskFromContour(const cv::Mat &contour, cv::Mat &output)
+void createMaskFromContour(const cv::Mat &contourImage, cv::Mat &output)
 {
-    // 輪郭抽出可能な形式に変換
-    cv::Mat analizableImage;
-    {
-        cv::Mat grayImage, binImage;
-        cv::cvtColor(contour, grayImage, CV_BGRA2GRAY);
-        cv::threshold(grayImage, binImage, 0, 255, cv::THRESH_BINARY|cv::THRESH_OTSU);
-        analizableImage = binImage;
-    }
-    
-    // 輪郭抽出
     vector<vector<cv::Point> > contours;
     vector<Vec4i> hierarchy;
-    cv::findContours(analizableImage,
-                     contours,
-                     hierarchy,
-                     RETR_LIST,
-                     CV_CHAIN_APPROX_NONE);
+    ImageAnalyzeError error = ImageAnalyzeErrorNone;
+    computeContour(contourImage, contours, hierarchy, &error);
     
-    if (contours.size() < 2 /* 外側を含めて数える */) {
-        LOG_PRINTF_C("can't find contour");
+    if (error != ImageAnalyzeErrorNone) {
         return;
     }
     
@@ -104,9 +95,9 @@ void createMaskFromContour(const cv::Mat &contour, cv::Mat &output)
 //        }
 //    }
 //
-//    Mat dst = Mat::zeros(contour.rows, contour.cols, CV_8U);
-//    drawContours( dst, contours, 1, Scalar(255, 255, 255), FILLED, 8, hierarchy[1][0] );
-//    
+    Mat dst = Mat::zeros(contourImage.rows, contourImage.cols, CV_8U);
+    drawContours( dst, contours, 1, Scalar(255, 255, 255), FILLED, 8, hierarchy[1][0] );
+
 //    UIImage *timage = MatToUIImage(contour.clone());
 //    cv::Mat maskImage = cv::Mat::zeros(contour.size(), CV_8UC3);
 //    vector<vector<cv::Point>> vectorForContur{*useContour};
