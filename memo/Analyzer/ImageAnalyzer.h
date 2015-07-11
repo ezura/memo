@@ -17,5 +17,6 @@ typedef enum : NSUInteger {
 @interface ImageAnalyzer : NSObject
 
 cv::Mat matWithImage(UIImage* image);
+UIImage *imageFromView(UIView *view);
 
 @end

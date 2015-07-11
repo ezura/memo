@@ -81,4 +81,9 @@
     UIGraphicsEndImageContext();
 }
 
+- (void)clearImage
+{
+    self.image = nil;
+}
+
 @end

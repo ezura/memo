@@ -25,4 +25,6 @@
 
 @property (nonatomic, assign) id<DrawLayerViewDelegate> delegate;
 
+- (void)clearImage;
+
 @end

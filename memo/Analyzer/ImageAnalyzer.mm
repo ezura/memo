@@ -30,4 +30,16 @@ cv::Mat matWithImage(UIImage* image)
     return mat;
 }
 
+UIImage *imageFromView(UIView *view)
+{
+    CGRect rect = view.bounds;
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [view.layer renderInContext:context];
+    UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return capturedImage;
+}
+
 @end

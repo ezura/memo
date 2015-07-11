@@ -38,6 +38,10 @@
                             <constraint firstItem="flD-37-jUL" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="uJO-Lz-MAB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="drawLayerView" destination="Drc-vn-mGy" id="rQc-zx-KZY"/>
+                        <outlet property="lunchBoxImageView" destination="flD-37-jUL" id="Jd7-u5-Tl1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

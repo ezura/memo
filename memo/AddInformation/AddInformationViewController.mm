@@ -7,8 +7,15 @@
 //
 
 #import "AddInformationViewController.h"
+#import "ImageAnalyzer+ContourAnalyze.h"
+#import "DishItem.h"
 
 @interface AddInformationViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *lunchBoxImageView;
+@property (weak, nonatomic) IBOutlet DrawLayerView *drawLayerView;
+
+@property (nonatomic, strong) NSMutableArray *dishItems;
 
 @end
 
@@ -17,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.dishItems = [NSMutableArray new];
+    self.drawLayerView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +42,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - DrawLayerView delegate
+- (void)drawLayerView:(DrawLayerView*)drawLayerView drawnImage:(UIImage*)image
+{
+    // TODO: 並列処理
+    DishItem *dishItem = [[DishItem alloc] initWithLunchBox:imageFromView(self.lunchBoxImageView) contourImage:image];
+    [self.dishItems addObject:dishItem];
+    
+    [drawLayerView clearImage];
+}
 
 @end
