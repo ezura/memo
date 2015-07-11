@@ -8,7 +8,8 @@
 
 #import "DrawLayerView.h"
 
-#import "ColorAnalyzer.h"
+#import "ImageAnalyzer.h"
+#import "ImageAnalyzer+ContourAnalyze.h"
 #import <opencv2/imgcodecs/ios.h>
 
 @implementation DrawLayerView

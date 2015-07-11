@@ -1,8 +1,8 @@
 //
-//  ColorAnalyzer.h
+//  ImageAnalyzer.h
 //  memo
 //
-//  Created by ezura on 7/2/15.
+//  Created by ezura on 7/11/15.
 //  Copyright (c) 2015 ezura. All rights reserved.
 //
 
@@ -14,10 +14,8 @@ typedef enum : NSUInteger {
     ImageAnalyzeErrorUnusableResult
 } ImageAnalyzeError;
 
-@interface ColorAnalyzer : NSObject
+@interface ImageAnalyzer : NSObject
 
-cv::Rect computeContourRange(const cv::Mat &contourImage);
-void createMaskFromContour(const cv::Mat &contour, cv::Mat &output);
 cv::Mat matWithImage(UIImage* image);
 
 @end

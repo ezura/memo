@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B26A16D515A3D2261F5B460 /* Pods_memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E279ADA0082728EF81FF67 /* Pods_memo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4C06B1AD9B8C2802204109E2 /* Pods_memoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E6B66EFC993930FC74D05 /* Pods_memoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */; };
+		FF0814AA1B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */; };
 		FF54593E1B3D20D600747C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54593D1B3D20D600747C07 /* main.m */; };
 		FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5459401B3D20D600747C07 /* AppDelegate.m */; };
 		FF5459441B3D20D600747C07 /* memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF5459421B3D20D600747C07 /* memo.xcdatamodeld */; };
@@ -34,7 +36,6 @@
 		FF76447A1B48C5F200211B12 /* DishItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7644781B48C5F200211B12 /* DishItemViewController.xib */; };
 		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
-		FFC450671B455F18005C0CB7 /* ColorAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,10 @@
 		37E279ADA0082728EF81FF67 /* Pods_memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53147AD0E00F1AA73ED1981 /* Pods-memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-memo/Pods-memo.debug.xcconfig"; sourceTree = "<group>"; };
 		D90936B15FDDEB3448718335 /* Pods-memoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-memoTests/Pods-memoTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF0814A51B50EF4000C6671A /* ImageAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageAnalyzer.h; path = Analyzer/ImageAnalyzer.h; sourceTree = "<group>"; };
+		FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalyzer.mm; path = Analyzer/ImageAnalyzer.mm; sourceTree = "<group>"; };
+		FF0814A81B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+ContourAnalyze.h"; path = "Analyzer/ImageAnalyzer+ContourAnalyze.h"; sourceTree = "<group>"; };
+		FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+ContourAnalyze.mm"; path = "Analyzer/ImageAnalyzer+ContourAnalyze.mm"; sourceTree = "<group>"; };
 		FF5459381B3D20D600747C07 /* memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54593C1B3D20D600747C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF54593D1B3D20D600747C07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,8 +94,6 @@
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
 		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
-		FFC450651B455F18005C0CB7 /* ColorAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorAnalyzer.h; path = Analyzer/ColorAnalyzer.h; sourceTree = "<group>"; };
-		FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ColorAnalyzer.mm; path = Analyzer/ColorAnalyzer.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,8 +257,10 @@
 		FFC450691B455F29005C0CB7 /* Analyze */ = {
 			isa = PBXGroup;
 			children = (
-				FFC450651B455F18005C0CB7 /* ColorAnalyzer.h */,
-				FFC450661B455F18005C0CB7 /* ColorAnalyzer.mm */,
+				FF0814A51B50EF4000C6671A /* ImageAnalyzer.h */,
+				FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */,
+				FF0814A81B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.h */,
+				FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */,
 			);
 			name = Analyze;
 			sourceTree = "<group>";
@@ -475,8 +480,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.mm in Sources */,
-				FFC450671B455F18005C0CB7 /* ColorAnalyzer.mm in Sources */,
 				FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */,
+				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
+				FF0814AA1B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
 				FF54593E1B3D20D600747C07 /* main.m in Sources */,
 				FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */,
