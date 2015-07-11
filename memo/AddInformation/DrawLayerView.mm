@@ -61,27 +61,15 @@
     [bezierPath addLineToPoint:currentPoint];
     [self drawLine:bezierPath];
     
-    cv::Mat test;
-//    UIImageToMat([UIImage imageNamed:@"sample.jpg"], test);
-//
-////    UIImageToMat(img, test, true);
-////    UIImage *test1 = UIImageFromMat(test);
-//    test = [DrawLayerView matWithImage:[UIImage imageNamed:@"sample.jpg"]];
-    test = [DrawLayerView matWithImage:self.image];
-    UIImage *image = self.image;
-    UIImage *image1 = MatToUIImage(test);
-    cv::Mat output;
-//    createMaskFromContour(test, output);
+    [self.delegate drawLayerView:self drawnImage:self.image];
     
-    cv::Rect selectedRange = computeContourRange(test);
-    
-//    cv::Mat dst = cv::Mat::zeros(output.rows, output.cols, CV_8UC4);
+//    cv::Mat test;
+//    test = matWithImage(self.image);
+//    UIImage *image = self.image;
+//    UIImage *image1 = MatToUIImage(test);
+//    cv::Mat output;
 //    
-//    UIImageView *originImage = [[UIImageView alloc] initWithFrame:self.frame];
-//    originImage.image = [UIImage imageNamed:@"sample.jpg"];
-//    cv::Mat originMatImage = [DrawLayerView matWithImage:[DrawLayerView imageWithView:originImage]];
-//    originMatImage.copyTo(dst, output);
-//    UIImage *image2 = MatToUIImage(dst);
+//    cv::Rect selectedRange = computeContourRange(test);
 }
 
 + (UIImage *) imageWithView:(UIView *)view
@@ -94,31 +82,6 @@
     UIGraphicsEndImageContext();
     
     return img;
-}
-
-+ (cv::Mat)matWithImage:(UIImage*)image
-{
-    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
-    CGFloat cols = image.size.width;
-    CGFloat rows = image.size.height;
-    
-    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
-    
-    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to  data
-                                                    cols,                       // Width of bitmap
-                                                    rows,                       // Height of bitmap
-                                                    8,                          // Bits per component
-                                                    cvMat.step[0],              // Bytes per row
-                                                    colorSpace,                 // Colorspace
-                                                    kCGImageAlphaNoneSkipLast |
-                                                    kCGBitmapByteOrderDefault); // Bitmap info flags
-    
-    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
-    CGContextRelease(contextRef);
-    //    CGColorSpaceRelease(colorSpace);
-//    cv::cvtColor(cvMat, cvMat, cv::COLOR_BGRA2BGR);
-    
-    return cvMat;
 }
 
 - (void)drawLine:(UIBezierPath*)path
