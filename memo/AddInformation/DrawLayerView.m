@@ -8,10 +8,6 @@
 
 #import "DrawLayerView.h"
 
-#import "ImageAnalyzer.h"
-#import "ImageAnalyzer+ContourAnalyze.h"
-#import <opencv2/imgcodecs/ios.h>
-
 @implementation DrawLayerView
 {
     UIBezierPath *bezierPath;
@@ -62,14 +58,6 @@
     [self drawLine:bezierPath];
     
     [self.delegate drawLayerView:self drawnImage:self.image];
-    
-//    cv::Mat test;
-//    test = matWithImage(self.image);
-//    UIImage *image = self.image;
-//    UIImage *image1 = MatToUIImage(test);
-//    cv::Mat output;
-//    
-//    cv::Rect selectedRange = computeContourRange(test);
 }
 
 + (UIImage *) imageWithView:(UIView *)view
@@ -78,7 +66,7 @@
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
     
     UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
-    
+
     UIGraphicsEndImageContext();
     
     return img;

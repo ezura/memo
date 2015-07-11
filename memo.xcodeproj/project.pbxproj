@@ -31,7 +31,7 @@
 		FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597E1B3E8D0800747C07 /* Foundation.framework */; };
 		FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */; };
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
-		FF6304011B3EE54500FD3CBC /* DrawLayerView.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.mm */; };
+		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
 		FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7644771B48C5F200211B12 /* DishItemViewController.m */; };
 		FF76447A1B48C5F200211B12 /* DishItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF7644781B48C5F200211B12 /* DishItemViewController.xib */; };
 		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
@@ -86,7 +86,7 @@
 		FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddInformationViewController.m; path = AddInformation/AddInformationViewController.m; sourceTree = "<group>"; };
 		FF6303FD1B3EE13F00FD3CBC /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
-		FF6304001B3EE54500FD3CBC /* DrawLayerView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DrawLayerView.mm; path = AddInformation/DrawLayerView.mm; sourceTree = "<group>"; };
+		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
 		FF7644761B48C5F200211B12 /* DishItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishItemViewController.h; path = AddInformation/DishItemViewController.h; sourceTree = "<group>"; };
 		FF7644771B48C5F200211B12 /* DishItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishItemViewController.m; path = AddInformation/DishItemViewController.m; sourceTree = "<group>"; };
 		FF7644781B48C5F200211B12 /* DishItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DishItemViewController.xib; path = AddInformation/DishItemViewController.xib; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */,
-				FF6304001B3EE54500FD3CBC /* DrawLayerView.mm */,
+				FF6304001B3EE54500FD3CBC /* DrawLayerView.m */,
 				FF7644761B48C5F200211B12 /* DishItemViewController.h */,
 				FF7644771B48C5F200211B12 /* DishItemViewController.m */,
 				FF7644781B48C5F200211B12 /* DishItemViewController.xib */,
@@ -479,7 +479,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF6304011B3EE54500FD3CBC /* DrawLayerView.mm in Sources */,
+				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
 				FF7644791B48C5F200211B12 /* DishItemViewController.m in Sources */,
 				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
 				FF0814AA1B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm in Sources */,
