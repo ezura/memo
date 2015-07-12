@@ -9,11 +9,13 @@
 #import "AddInformationViewController.h"
 #import "ImageAnalyzer+ContourAnalyze.h"
 #import "DishItem.h"
+#import "RegisteredDishTableViewController.h"
 
 @interface AddInformationViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *lunchBoxImageView;
 @property (weak, nonatomic) IBOutlet DrawLayerView *drawLayerView;
+@property (weak, nonatomic) RegisteredDishTableViewController *registeredDishTableViewController;
 
 @property (nonatomic, strong) NSMutableArray *dishItems;
 
@@ -37,15 +39,13 @@
     self.drawLayerView.delegate = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"RegisteredDishTable"]) {
+        self.registeredDishTableViewController = (RegisteredDishTableViewController *)segue.destinationViewController;
+        self.registeredDishTableViewController.dishes = self.dishItems;
+    }
 }
-*/
 
 #pragma mark - DrawLayerView delegate
 - (void)drawLayerView:(DrawLayerView*)drawLayerView drawnImage:(UIImage*)image
@@ -54,6 +54,8 @@
     DishItem *dishItem = [[DishItem alloc] initWithLunchBox:imageFromView(self.lunchBoxImageView) contourImage:image];
     [self.dishItems addObject:dishItem];
     
+    self.registeredDishTableViewController.dishes = self.dishItems;
+    [self.registeredDishTableViewController.tableView reloadData];
     [drawLayerView clearImage];
 }
 

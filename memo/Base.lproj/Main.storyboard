@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flD-37-jUL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flD-37-jUL">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drc-vn-mGy" customClass="DrawLayerView">
@@ -25,17 +25,29 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-OK-J1o">
+                                <rect key="frame" x="484" y="20" width="100" height="580"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="HbJ-HE-tWT"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="I58-eP-MOv" kind="embed" identifier="RegisteredDishTable" id="H4i-fQ-CZG"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="flD-37-jUL" secondAttribute="bottom" id="898-Zo-smj"/>
                             <constraint firstItem="Drc-vn-mGy" firstAttribute="width" secondItem="flD-37-jUL" secondAttribute="width" id="FDQ-Yj-PPK"/>
                             <constraint firstItem="Drc-vn-mGy" firstAttribute="top" secondItem="flD-37-jUL" secondAttribute="top" id="PVg-Hs-o7x"/>
+                            <constraint firstItem="PqV-OK-J1o" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="RSa-by-nZ4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="PqV-OK-J1o" secondAttribute="bottom" id="UNm-62-ifW"/>
                             <constraint firstItem="flD-37-jUL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="VTM-ZA-Aw4"/>
                             <constraint firstItem="flD-37-jUL" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="dLr-ed-Q0i"/>
                             <constraint firstItem="Drc-vn-mGy" firstAttribute="height" secondItem="flD-37-jUL" secondAttribute="height" id="oKB-xR-i4b"/>
                             <constraint firstItem="Drc-vn-mGy" firstAttribute="leading" secondItem="flD-37-jUL" secondAttribute="leading" id="tvg-gx-7c5"/>
                             <constraint firstItem="flD-37-jUL" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="uJO-Lz-MAB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PqV-OK-J1o" secondAttribute="trailing" id="ye6-h8-W2T"/>
                         </constraints>
                     </view>
                     <connections>
@@ -46,8 +58,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Registered Dish Table View Controller-->
+        <scene sceneID="GX3-Li-n7t">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="I58-eP-MOv" customClass="RegisteredDishTableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQt-UA-fVF"/>
+                        <viewControllerLayoutGuide type="bottom" id="iGH-Mo-pyy"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2zo-Te-hzN" customClass="UITableView">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="580"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGL-cE-abU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="282"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="sample.jpg" width="500" height="300"/>
+        <image name="sample2.jpg" width="4208" height="3120"/>
     </resources>
 </document>

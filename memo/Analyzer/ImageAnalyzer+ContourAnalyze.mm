@@ -133,9 +133,9 @@ UIColor* computeColor(const cv::Mat &image)
 //    return [UIColor colorWithRed:m2.data[0] green:m2.data[1] blue:m2.data[2] alpha:m2.data[3]];
     cv::Mat onePixImage;
     resize(image, onePixImage, cv::Size(1, 1), 0, 0, INTER_AREA);
-    auto bgra = onePixImage.at<cv::Vec4b>(0,0);
+    auto rgba = onePixImage.at<cv::Vec4b>(0,0);
     
-    return [UIColor colorWithRed:bgra[2]/255.f green:bgra[1]/255.f blue:bgra[0]/255.f alpha:bgra[3]];
+    return [UIColor colorWithRed:rgba[0]/255.f green:rgba[1]/255.f blue:rgba[2]/255.f alpha:rgba[3]];
 }
 
 @end
