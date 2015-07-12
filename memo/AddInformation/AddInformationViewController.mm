@@ -23,14 +23,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.dishItems = [NSMutableArray new];
-    self.drawLayerView.delegate = self;
+    [self initField];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+# pragma mark - init
+- (void)initField
+{
+    self.dishItems = [NSMutableArray new];
+    self.drawLayerView.delegate = self;
 }
 
 /*

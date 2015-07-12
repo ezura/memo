@@ -33,6 +33,7 @@
     self.data.dishImage = MatToUIImage(lunchBoxCvMat(contourRect).clone());
     
     self.data.rect = CGRectMake(contourRect.x, contourRect.y, contourRect.width, contourRect.height);
+    self.data.color = computeColor(matWithImage(self.data.dishImage));
 }
 
 @end
