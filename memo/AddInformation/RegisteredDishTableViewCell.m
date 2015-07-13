@@ -10,7 +10,7 @@
 
 @interface RegisteredDishTableViewCell()
 
-@property (weak, nonatomic) IBOutlet UIImageView *colorImageView;
+@property (weak, nonatomic) IBOutlet UIView *colorView;
 @property (weak, nonatomic) IBOutlet UIImageView *dishImageView;
 
 @end
@@ -19,6 +19,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -30,7 +31,7 @@
 #pragma mark - set contents
 - (void)setContent:(DishItem*)content
 {
-    self.colorImageView.backgroundColor = content.data.color;
+    self.colorView.backgroundColor = content.data.color;
     self.dishImageView.image = content.data.dishImage;
 }
 

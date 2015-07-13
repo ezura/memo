@@ -20,20 +20,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flD-37-jUL">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drc-vn-mGy" customClass="DrawLayerView">
-                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-OK-J1o">
-                                <rect key="frame" x="484" y="20" width="100" height="580"/>
+                                <rect key="frame" x="504" y="20" width="80" height="580"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="HbJ-HE-tWT"/>
+                                    <constraint firstAttribute="width" constant="80" id="HbJ-HE-tWT"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="I58-eP-MOv" kind="embed" identifier="RegisteredDishTable" id="H4i-fQ-CZG"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drc-vn-mGy" customClass="DrawLayerView">
+                                <rect key="frame" x="16" y="0.0" width="568" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -67,7 +68,7 @@
                         <viewControllerLayoutGuide type="bottom" id="iGH-Mo-pyy"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2zo-Te-hzN" customClass="UITableView">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="580"/>
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="580"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
