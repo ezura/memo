@@ -17,6 +17,7 @@
     self = [super self];
     if (self) {
         self.userInteractionEnabled = YES;
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -55,15 +56,34 @@
     CGPoint currentPoint = [[touches anyObject] locationInView:self];
     [bezierPath addLineToPoint:currentPoint];
     [self drawLine:bezierPath];
+    
+    [self.delegate drawLayerView:self drawnImage:self.image];
+}
+
++ (UIImage *) imageWithView:(UIView *)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage * img = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+    
+    return img;
 }
 
 - (void)drawLine:(UIBezierPath*)path
 {
     UIGraphicsBeginImageContext(self.frame.size);
-    [[UIColor blackColor] setStroke];
+    [[UIColor whiteColor] setStroke];
     [path stroke];
     self.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+}
+
+- (void)clearImage
+{
+    self.image = nil;
 }
 
 @end
