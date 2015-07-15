@@ -12,6 +12,5 @@
 
 cv::Rect computeContourRange(const cv::Mat &contourImage);
 void createMaskFromContour(const cv::Mat &contour, cv::Mat &output);
-UIColor* computeColor(const cv::Mat &image);
 
 @end
