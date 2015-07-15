@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 ezura. All rights reserved.
 //
 
-#import "ImageAnalyzer+ContourAnalyze.h"
+#import "ImageAnalyzer+Contour.h"
 
 using namespace std;
 using namespace cv;
 
-@implementation ImageAnalyzer (ContourAnalyze)
+@implementation ImageAnalyzer (Contour)
 
 /**
  *  輪郭を抽出する
