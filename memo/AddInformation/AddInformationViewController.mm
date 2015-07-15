@@ -52,7 +52,8 @@
 {
     // TODO: 並列処理
     DishItem *dishItem = [[DishItem alloc] initWithLunchBox:imageFromView(self.lunchBoxImageView) contourImage:image];
-    [self.dishItems addObject:dishItem];
+//    [self.dishItems addObject:dishItem];
+    [self.dishItems insertObject:dishItem atIndex:0];
     
     self.registeredDishTableViewController.dishes = self.dishItems;
     [self.registeredDishTableViewController.tableView reloadData];
