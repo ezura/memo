@@ -35,6 +35,12 @@
     return self;
 }
 
+#pragma mark - manage view
+- (void)clearLine
+{
+    [self.drawView clearImage];
+}
+
 #pragma mark - compute color, rect, image
 - (void)pickColorInCloedArea:(UIImage*)contourImage
 {

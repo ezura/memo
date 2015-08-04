@@ -22,6 +22,18 @@
 
 @property (nonatomic, weak) id<EnclosedAreaColorPickerDelegate> delegate;
 
+/**
+ *  色取得対象を指定してインスタンス作成
+ *
+ *  @param pickTargetView 色取得対象の View
+ *
+ *  @return
+ */
 - (instancetype)initWithTargetView:(UIView*)pickTargetView;
+
+/**
+ *  線を消す
+ */
+- (void)clearLine;
 
 @end
