@@ -10,7 +10,7 @@
 		1B26A16D515A3D2261F5B460 /* Pods_memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E279ADA0082728EF81FF67 /* Pods_memo.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		4C06B1AD9B8C2802204109E2 /* Pods_memoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E6B66EFC993930FC74D05 /* Pods_memoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */; };
-		FF0814AA1B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */; };
+		FF0814AA1B50F10100C6671A /* ImageAnalyzer+Contour.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */; };
 		FF0814AD1B5172C100C6671A /* DishItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814AC1B5172C100C6671A /* DishItem.mm */; };
 		FF0814B01B51913D00C6671A /* DishData.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0814AF1B51913D00C6671A /* DishData.m */; };
 		FF54593E1B3D20D600747C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54593D1B3D20D600747C07 /* main.m */; };
@@ -35,6 +35,7 @@
 		FF5D68411B5217EC008E35F1 /* RegisteredDishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5D68401B5217EC008E35F1 /* RegisteredDishTableViewController.m */; };
 		FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5D68461B523151008E35F1 /* RegisteredDishTableViewCell.m */; };
 		FF5D68491B523151008E35F1 /* RegisteredDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5D68471B523151008E35F1 /* RegisteredDishTableViewCell.xib */; };
+		FF5D684C1B55E371008E35F1 /* ImageAnalyzer+Color.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */; };
 		FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */; };
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
@@ -61,8 +62,8 @@
 		D90936B15FDDEB3448718335 /* Pods-memoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-memoTests/Pods-memoTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF0814A51B50EF4000C6671A /* ImageAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageAnalyzer.h; path = Analyzer/ImageAnalyzer.h; sourceTree = "<group>"; };
 		FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalyzer.mm; path = Analyzer/ImageAnalyzer.mm; sourceTree = "<group>"; };
-		FF0814A81B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+ContourAnalyze.h"; path = "Analyzer/ImageAnalyzer+ContourAnalyze.h"; sourceTree = "<group>"; };
-		FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+ContourAnalyze.mm"; path = "Analyzer/ImageAnalyzer+ContourAnalyze.mm"; sourceTree = "<group>"; };
+		FF0814A81B50F10100C6671A /* ImageAnalyzer+Contour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+Contour.h"; path = "Analyzer/ImageAnalyzer+Contour.h"; sourceTree = "<group>"; };
+		FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+Contour.mm"; path = "Analyzer/ImageAnalyzer+Contour.mm"; sourceTree = "<group>"; };
 		FF0814AB1B5172C100C6671A /* DishItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishItem.h; path = DishData/DishItem.h; sourceTree = "<group>"; };
 		FF0814AC1B5172C100C6671A /* DishItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DishItem.mm; path = DishData/DishItem.mm; sourceTree = "<group>"; };
 		FF0814AE1B51913D00C6671A /* DishData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishData.h; path = DishData/DishData.h; sourceTree = "<group>"; };
@@ -96,6 +97,8 @@
 		FF5D68451B523151008E35F1 /* RegisteredDishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisteredDishTableViewCell.h; path = AddInformation/RegisteredDishTableViewCell.h; sourceTree = "<group>"; };
 		FF5D68461B523151008E35F1 /* RegisteredDishTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisteredDishTableViewCell.m; path = AddInformation/RegisteredDishTableViewCell.m; sourceTree = "<group>"; };
 		FF5D68471B523151008E35F1 /* RegisteredDishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisteredDishTableViewCell.xib; path = AddInformation/RegisteredDishTableViewCell.xib; sourceTree = "<group>"; };
+		FF5D684A1B55E371008E35F1 /* ImageAnalyzer+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+Color.h"; path = "Analyzer/ImageAnalyzer+Color.h"; sourceTree = "<group>"; };
+		FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+Color.mm"; path = "Analyzer/ImageAnalyzer+Color.mm"; sourceTree = "<group>"; };
 		FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddInformationViewController.h; path = AddInformation/AddInformationViewController.h; sourceTree = "<group>"; };
 		FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AddInformationViewController.mm; path = AddInformation/AddInformationViewController.mm; sourceTree = "<group>"; };
 		FF6303FD1B3EE13F00FD3CBC /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
@@ -286,8 +289,10 @@
 			children = (
 				FF0814A51B50EF4000C6671A /* ImageAnalyzer.h */,
 				FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */,
-				FF0814A81B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.h */,
-				FF0814A91B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm */,
+				FF5D684A1B55E371008E35F1 /* ImageAnalyzer+Color.h */,
+				FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */,
+				FF0814A81B50F10100C6671A /* ImageAnalyzer+Contour.h */,
+				FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */,
 			);
 			name = Analyze;
 			sourceTree = "<group>";
@@ -509,7 +514,8 @@
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
 				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
 				FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */,
-				FF0814AA1B50F10100C6671A /* ImageAnalyzer+ContourAnalyze.mm in Sources */,
+				FF5D684C1B55E371008E35F1 /* ImageAnalyzer+Color.mm in Sources */,
+				FF0814AA1B50F10100C6671A /* ImageAnalyzer+Contour.mm in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
 				FF0814AD1B5172C100C6671A /* DishItem.mm in Sources */,
 				FF0814B01B51913D00C6671A /* DishData.m in Sources */,

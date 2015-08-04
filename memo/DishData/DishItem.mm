@@ -8,7 +8,8 @@
 
 #import "DishItem.h"
 #import <opencv2/imgcodecs/ios.h>
-#import "ImageAnalyzer+ContourAnalyze.h"
+#import "ImageAnalyzer+Contour.h"
+#import "ImageAnalyzer+Color.h"
 
 @interface DishItem()
 @end
