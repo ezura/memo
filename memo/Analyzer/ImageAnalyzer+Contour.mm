@@ -58,6 +58,18 @@ void computeContour(const cv::Mat &contourImage, vector<vector<cv::Point>> &cont
  *
  *  @return 図形を囲む最小の矩形
  */
+cv::Rect computeContourRange(UIImage* contourImage)
+{
+    return computeContourRange(matWithImage(contourImage));
+}
+
+/**
+ *  図形を囲む最小の矩形を算出
+ *
+ *  @param contourImage 図形の描かれmた image
+ *
+ *  @return 図形を囲む最小の矩形
+ */
 cv::Rect computeContourRange(const cv::Mat &contourImage)
 {
     vector<vector<cv::Point>> contours;

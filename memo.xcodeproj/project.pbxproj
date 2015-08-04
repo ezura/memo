@@ -36,11 +36,15 @@
 		FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5D68461B523151008E35F1 /* RegisteredDishTableViewCell.m */; };
 		FF5D68491B523151008E35F1 /* RegisteredDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5D68471B523151008E35F1 /* RegisteredDishTableViewCell.xib */; };
 		FF5D684C1B55E371008E35F1 /* ImageAnalyzer+Color.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */; };
+		FF5D68501B56819A008E35F1 /* EnclosedAreaColorPicker.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF5D684F1B56819A008E35F1 /* EnclosedAreaColorPicker.mm */; };
 		FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */; };
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
 		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
+		FFBB3FE71B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */; };
+		FFBB3FE81B6DE1C40014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
+		FFE2A69E1B588F470010BACF /* Dish.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE2A69D1B588F470010BACF /* Dish.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,15 +103,21 @@
 		FF5D68471B523151008E35F1 /* RegisteredDishTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RegisteredDishTableViewCell.xib; path = AddInformation/RegisteredDishTableViewCell.xib; sourceTree = "<group>"; };
 		FF5D684A1B55E371008E35F1 /* ImageAnalyzer+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+Color.h"; path = "Analyzer/ImageAnalyzer+Color.h"; sourceTree = "<group>"; };
 		FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+Color.mm"; path = "Analyzer/ImageAnalyzer+Color.mm"; sourceTree = "<group>"; };
+		FF5D684E1B56819A008E35F1 /* EnclosedAreaColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnclosedAreaColorPicker.h; path = Util/EnclosedAreaPicker/EnclosedAreaColorPicker.h; sourceTree = "<group>"; };
+		FF5D684F1B56819A008E35F1 /* EnclosedAreaColorPicker.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EnclosedAreaColorPicker.mm; path = Util/EnclosedAreaPicker/EnclosedAreaColorPicker.mm; sourceTree = "<group>"; };
 		FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddInformationViewController.h; path = AddInformation/AddInformationViewController.h; sourceTree = "<group>"; };
 		FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AddInformationViewController.mm; path = AddInformation/AddInformationViewController.mm; sourceTree = "<group>"; };
 		FF6303FD1B3EE13F00FD3CBC /* sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample.jpg; sourceTree = "<group>"; };
 		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
 		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
 		FF76447B1B4B999E00211B12 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		FFBB3FE51B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnclosedAreaColorPickerResult.h; path = Analyzer/EnclosedAreaColorPickerResult.h; sourceTree = "<group>"; };
+		FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnclosedAreaColorPickerResult.m; path = Analyzer/EnclosedAreaColorPickerResult.m; sourceTree = "<group>"; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		FFBDDFA91B3E9467007DC84B /* memo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "memo-Prefix.pch"; sourceTree = "<group>"; };
 		FFBDDFAB1B3E9589007DC84B /* DebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebugLog.h; path = Util/DebugLog.h; sourceTree = "<group>"; };
+		FFE2A69C1B588F470010BACF /* Dish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dish.h; path = DishData/Dish.h; sourceTree = "<group>"; };
+		FFE2A69D1B588F470010BACF /* Dish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Dish.m; path = DishData/Dish.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +215,7 @@
 				FF5459481B3D20D600747C07 /* Main.storyboard */,
 				FFC450691B455F29005C0CB7 /* Analyze */,
 				FFBDDFAA1B3E9523007DC84B /* Util */,
-				FF6303F81B3ED3FF00FD3CBC /* EditInformation */,
+				FF6303F81B3ED3FF00FD3CBC /* EditLunchBox */,
 				FF54594B1B3D20D600747C07 /* Images.xcassets */,
 				FF54594D1B3D20D600747C07 /* LaunchScreen.xib */,
 				FF5459421B3D20D600747C07 /* memo.xcdatamodeld */,
@@ -253,17 +263,26 @@
 			name = table;
 			sourceTree = "<group>";
 		};
-		FF6303F81B3ED3FF00FD3CBC /* EditInformation */ = {
+		FF5D684D1B567EBE008E35F1 /* EnclosedAreaColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				FF5D683E1B52176B008E35F1 /* table */,
-				FFC4506A1B4612DC005C0CB7 /* dish */,
-				FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */,
-				FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */,
+				FF5D684E1B56819A008E35F1 /* EnclosedAreaColorPicker.h */,
+				FF5D684F1B56819A008E35F1 /* EnclosedAreaColorPicker.mm */,
 				FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */,
 				FF6304001B3EE54500FD3CBC /* DrawLayerView.m */,
 			);
-			name = EditInformation;
+			name = EnclosedAreaColorPicker;
+			sourceTree = "<group>";
+		};
+		FF6303F81B3ED3FF00FD3CBC /* EditLunchBox */ = {
+			isa = PBXGroup;
+			children = (
+				FF6303F91B3ED4E300FD3CBC /* AddInformationViewController.h */,
+				FF6303FA1B3ED4E300FD3CBC /* AddInformationViewController.mm */,
+				FF5D683E1B52176B008E35F1 /* table */,
+				FFC4506A1B4612DC005C0CB7 /* dish */,
+			);
+			name = EditLunchBox;
 			sourceTree = "<group>";
 		};
 		FF6303FC1B3EE13F00FD3CBC /* Resources */ = {
@@ -280,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				FFBDDFAB1B3E9589007DC84B /* DebugLog.h */,
+				FF5D684D1B567EBE008E35F1 /* EnclosedAreaColorPicker */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -293,6 +313,8 @@
 				FF5D684B1B55E371008E35F1 /* ImageAnalyzer+Color.mm */,
 				FF0814A81B50F10100C6671A /* ImageAnalyzer+Contour.h */,
 				FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */,
+				FFBB3FE51B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.h */,
+				FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */,
 			);
 			name = Analyze;
 			sourceTree = "<group>";
@@ -300,6 +322,8 @@
 		FFC4506A1B4612DC005C0CB7 /* dish */ = {
 			isa = PBXGroup;
 			children = (
+				FFE2A69C1B588F470010BACF /* Dish.h */,
+				FFE2A69D1B588F470010BACF /* Dish.m */,
 				FF0814AB1B5172C100C6671A /* DishItem.h */,
 				FF0814AC1B5172C100C6671A /* DishItem.mm */,
 				FF0814AE1B51913D00C6671A /* DishData.h */,
@@ -363,7 +387,7 @@
 				TargetAttributes = {
 					FF5459371B3D20D600747C07 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = P9XQAG8RUW;
+						DevelopmentTeam = 32A38QPD5H;
 					};
 					FF5459531B3D20D600747C07 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -513,7 +537,10 @@
 			files = (
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
 				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
+				FF5D68501B56819A008E35F1 /* EnclosedAreaColorPicker.mm in Sources */,
+				FFE2A69E1B588F470010BACF /* Dish.m in Sources */,
 				FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */,
+				FFBB3FE71B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */,
 				FF5D684C1B55E371008E35F1 /* ImageAnalyzer+Color.mm in Sources */,
 				FF0814AA1B50F10100C6671A /* ImageAnalyzer+Contour.mm in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
@@ -530,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBB3FE81B6DE1C40014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */,
 				FF54595B1B3D20D600747C07 /* memoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,10 +7,9 @@
 //
 
 #import "AddInformationViewController.h"
-#import "ImageAnalyzer+Contour.h"
-#import "ImageAnalyzer+Color.h"
 #import "DishItem.h"
 #import "RegisteredDishTableViewController.h"
+#import "ImageAnalyzer.h"
 
 @interface AddInformationViewController ()
 

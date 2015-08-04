@@ -7,6 +7,7 @@
 //
 
 #import "DishItem.h"
+#import <opencv2/opencv.hpp>
 #import <opencv2/imgcodecs/ios.h>
 #import "ImageAnalyzer+Contour.h"
 #import "ImageAnalyzer+Color.h"

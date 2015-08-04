@@ -17,13 +17,13 @@
  *  @param view  DrawLayerView 自身
  *  @param image 完成した図形
  */
-- (void)drawLayerView:(DrawLayerView*)drawLayerView drawnImage:(UIImage*)image;
+- (void)drawLayerView:(DrawLayerView*)drawLayerView drawnImage:(UIImage*)closedAreaImage;
 
 @end
 
 @interface DrawLayerView : UIImageView
 
-@property (nonatomic, assign) id<DrawLayerViewDelegate> delegate;
+@property (nonatomic, weak) id<DrawLayerViewDelegate> delegate;
 
 - (void)clearImage;
 

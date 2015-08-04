@@ -60,7 +60,7 @@
     [self.delegate drawLayerView:self drawnImage:self.image];
 }
 
-+ (UIImage *) imageWithView:(UIView *)view
++ (UIImage *)imageWithView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];
