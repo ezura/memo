@@ -29,7 +29,6 @@
 		FF54597B1B3E8CF900747C07 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597A1B3E8CF900747C07 /* QuartzCore.framework */; };
 		FF54597D1B3E8D0100747C07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597C1B3E8D0100747C07 /* UIKit.framework */; };
 		FF54597F1B3E8D0800747C07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54597E1B3E8D0800747C07 /* Foundation.framework */; };
-		FF5D683D1B5214BB008E35F1 /* sample2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF5D683C1B5214BB008E35F1 /* sample2.jpg */; };
 		FF5D68411B5217EC008E35F1 /* RegisteredDishTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5D68401B5217EC008E35F1 /* RegisteredDishTableViewController.m */; };
 		FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5D68461B523151008E35F1 /* RegisteredDishTableViewCell.m */; };
 		FF5D68491B523151008E35F1 /* RegisteredDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF5D68471B523151008E35F1 /* RegisteredDishTableViewCell.xib */; };
@@ -39,6 +38,11 @@
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
 		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
+		FF7BB0AE1B723EC700EF511F /* ColorDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */; };
+		FF7BB0AF1B723ED400EF511F /* ColorDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */; };
+		FF7BB0B11B7242E600EF511F /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B01B7242E600EF511F /* ColorTests.m */; };
+		FF7BB0B41B72456900EF511F /* BasicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B31B72456900EF511F /* BasicColor.m */; };
+		FF7BB0B51B72456900EF511F /* BasicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B31B72456900EF511F /* BasicColor.m */; };
 		FFBB3FE71B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */; };
 		FFBB3FE81B6DE1C40014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */; };
 		FFBDDFA81B3E9052007DC84B /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */; };
@@ -89,7 +93,6 @@
 		FF54597A1B3E8CF900747C07 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FF54597C1B3E8D0100747C07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FF54597E1B3E8D0800747C07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		FF5D683C1B5214BB008E35F1 /* sample2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample2.jpg; sourceTree = "<group>"; };
 		FF5D683F1B5217EC008E35F1 /* RegisteredDishTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisteredDishTableViewController.h; path = AddInformation/RegisteredDishTableViewController.h; sourceTree = "<group>"; };
 		FF5D68401B5217EC008E35F1 /* RegisteredDishTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegisteredDishTableViewController.m; path = AddInformation/RegisteredDishTableViewController.m; sourceTree = "<group>"; };
 		FF5D68451B523151008E35F1 /* RegisteredDishTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegisteredDishTableViewCell.h; path = AddInformation/RegisteredDishTableViewCell.h; sourceTree = "<group>"; };
@@ -105,6 +108,11 @@
 		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
 		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
 		FF76447B1B4B999E00211B12 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		FF7BB0AC1B723EC700EF511F /* ColorDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDictionary.h; sourceTree = "<group>"; };
+		FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorDictionary.m; sourceTree = "<group>"; };
+		FF7BB0B01B7242E600EF511F /* ColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
+		FF7BB0B21B72456900EF511F /* BasicColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicColor.h; sourceTree = "<group>"; };
+		FF7BB0B31B72456900EF511F /* BasicColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicColor.m; sourceTree = "<group>"; };
 		FFBB3FE51B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnclosedAreaColorPickerResult.h; path = Analyzer/EnclosedAreaColorPickerResult.h; sourceTree = "<group>"; };
 		FFBB3FE61B6DE1C30014C5A3 /* EnclosedAreaColorPickerResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnclosedAreaColorPickerResult.m; path = Analyzer/EnclosedAreaColorPickerResult.m; sourceTree = "<group>"; };
 		FFBDDFA71B3E9052007DC84B /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
@@ -204,6 +212,7 @@
 		FF54593A1B3D20D600747C07 /* memo */ = {
 			isa = PBXGroup;
 			children = (
+				FF7BB0AB1B723E8D00EF511F /* ColorDictionary */,
 				FF54593F1B3D20D600747C07 /* AppDelegate.h */,
 				FF5459401B3D20D600747C07 /* AppDelegate.m */,
 				FF5459481B3D20D600747C07 /* Main.storyboard */,
@@ -233,6 +242,7 @@
 			children = (
 				FF54595A1B3D20D600747C07 /* memoTests.m */,
 				FF5459581B3D20D600747C07 /* Supporting Files */,
+				FF7BB0B01B7242E600EF511F /* ColorTests.m */,
 			);
 			path = memoTests;
 			sourceTree = "<group>";
@@ -283,10 +293,20 @@
 			isa = PBXGroup;
 			children = (
 				FF6303FD1B3EE13F00FD3CBC /* sample.jpg */,
-				FF5D683C1B5214BB008E35F1 /* sample2.jpg */,
 			);
 			name = Resources;
 			path = memo/Resources;
+			sourceTree = "<group>";
+		};
+		FF7BB0AB1B723E8D00EF511F /* ColorDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				FF7BB0AC1B723EC700EF511F /* ColorDictionary.h */,
+				FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */,
+				FF7BB0B21B72456900EF511F /* BasicColor.h */,
+				FF7BB0B31B72456900EF511F /* BasicColor.m */,
+			);
+			path = ColorDictionary;
 			sourceTree = "<group>";
 		};
 		FFBDDFAA1B3E9523007DC84B /* Util */ = {
@@ -412,7 +432,6 @@
 				FF54594A1B3D20D600747C07 /* Main.storyboard in Resources */,
 				FF5D68491B523151008E35F1 /* RegisteredDishTableViewCell.xib in Resources */,
 				FF54594F1B3D20D600747C07 /* LaunchScreen.xib in Resources */,
-				FF5D683D1B5214BB008E35F1 /* sample2.jpg in Resources */,
 				FF54594C1B3D20D600747C07 /* Images.xcassets in Resources */,
 				FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */,
 			);
@@ -526,7 +545,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
+				FF7BB0AE1B723EC700EF511F /* ColorDictionary.m in Sources */,
 				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
+				FF7BB0B41B72456900EF511F /* BasicColor.m in Sources */,
 				FF5D68501B56819A008E35F1 /* EnclosedAreaColorPicker.mm in Sources */,
 				FFE2A69E1B588F470010BACF /* Dish.m in Sources */,
 				FF5D68481B523151008E35F1 /* RegisteredDishTableViewCell.m in Sources */,
@@ -546,7 +567,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFBB3FE81B6DE1C40014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */,
+				FF7BB0B11B7242E600EF511F /* ColorTests.m in Sources */,
 				FF54595B1B3D20D600747C07 /* memoTests.m in Sources */,
+				FF7BB0B51B72456900EF511F /* BasicColor.m in Sources */,
+				FF7BB0AF1B723ED400EF511F /* ColorDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
