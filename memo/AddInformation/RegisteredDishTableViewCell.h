@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DishItem.h"
+#import "Dish.h"
 
 @interface RegisteredDishTableViewCell : UITableViewCell
 
-- (void)setContent:(DishItem*)content;
+- (void)setContent:(Dish*)content;
 
 @end

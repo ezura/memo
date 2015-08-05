@@ -16,21 +16,18 @@
 
 @interface EnclosedAreaColorPicker() <DrawLayerViewDelegate>
 
-@property(nonatomic, weak)   UIView* pickTargetView;
-@property(nonatomic, strong) DrawLayerView* drawView;
-
 @end
 
 @implementation EnclosedAreaColorPicker
 
-- (instancetype)initWithTargetView:(UIView*)pickTargetView
+- (id)init
 {
-    self = [self init];
+    self = [super init];
     
     if (self) {
-        self.pickTargetView = pickTargetView;
-        self.drawView = [[DrawLayerView alloc] initWithFrame:pickTargetView.frame];
-        [pickTargetView addSubview:self.drawView];
+        self.drawView = [DrawLayerView new];
+        self.drawView.delegate = self;
+        self.drawView.userInteractionEnabled = YES;
     }
     return self;
 }

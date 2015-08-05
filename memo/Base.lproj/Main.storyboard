@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flD-37-jUL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="flD-37-jUL">
                                 <rect key="frame" x="16" y="0.0" width="568" height="600"/>
                             </imageView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-OK-J1o">
@@ -70,6 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sample2.jpg" width="4208" height="3120"/>
+        <image name="sample.jpg" width="500" height="300"/>
     </resources>
 </document>

@@ -14,7 +14,7 @@
 }
 
 - (id)init {
-    self = [super self];
+    self = [super init];
     if (self) {
         self.userInteractionEnabled = YES;
         self.backgroundColor = [UIColor clearColor];

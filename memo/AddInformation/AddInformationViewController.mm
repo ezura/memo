@@ -7,7 +7,7 @@
 //
 
 #import "AddInformationViewController.h"
-#import "DishItem.h"
+#import "Dish.h"
 #import "RegisteredDishTableViewController.h"
 #import "ImageAnalyzer.h"
 #import "EnclosedAreaColorPicker.h"
@@ -20,7 +20,7 @@
     EnclosedAreaColorPicker *_colorPicker;
 }
 
-@property (nonatomic, strong) NSMutableArray *dishItems;
+@property (nonatomic, strong) NSMutableArray *dishs;
 
 @end
 
@@ -31,6 +31,11 @@
     [self initFields];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -38,45 +43,32 @@
 # pragma mark - init
 - (void)initFields
 {
-    self.dishItems = [NSMutableArray new];
+    self.dishs = [NSMutableArray new];
     
-    _colorPicker = [[EnclosedAreaColorPicker alloc] initWithTargetView:_lunchBoxImageView];
+    _colorPicker = [EnclosedAreaColorPicker new];
+    _colorPicker.pickTargetView = _lunchBoxImageView;
     _colorPicker.delegate = self;
-    
+    _colorPicker.drawView.frame = _lunchBoxImageView.bounds;
+    [self.view addSubview:_colorPicker.drawView];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"RegisteredDishTable"]) {
         _dishTableViewController = (RegisteredDishTableViewController *)segue.destinationViewController;
-        _dishTableViewController.dishes = self.dishItems;
+        _dishTableViewController.dishes = self.dishs;
     }
-}
-
-#pragma mark - DrawLayerView delegate
-- (void)drawLayerView:(DrawLayerView*)drawLayerView drawnImage:(UIImage*)image
-{
-    // TODO: 並列処理
-    DishItem *dishItem = [[DishItem alloc] initWithLunchBox:imageFromView(_lunchBoxImageView) contourImage:image];
-//    [self.dishItems addObject:dishItem];
-    [self.dishItems insertObject:dishItem atIndex:0];
-    
-    _dishTableViewController.dishes = self.dishItems;
-    [_dishTableViewController.tableView reloadData];
-    [drawLayerView clearImage];
 }
 
 #pragma mark - EnclosedAreaColorPickerDelegate
 - (void)enclosedAreaColorPicker:(EnclosedAreaColorPicker*)enclosedAreaColorPicker result:(EnclosedAreaColorPickerResult*)result
 {
-//    // TODO: 並列処理
-//    DishItem *dishItem = [[DishItem alloc] initWithLunchBox:imageFromView(_lunchBoxImageView) contourImage:image];
-//    //    [self.dishItems addObject:dishItem];
-//    [self.dishItems insertObject:dishItem atIndex:0];
-//    
-//    _dishTableViewController.dishes = self.dishItems;
-//    [_dishTableViewController.tableView reloadData];
-//    [_colorPicker clearLine];
+    Dish *dish = [Dish dishWithEnclosedAreaColorPickerResult:result];
+    [self.dishs insertObject:dish atIndex:0];
+    _dishTableViewController.dishes = self.dishs;
+    
+    [_dishTableViewController.tableView reloadData];
+    [_colorPicker clearLine];
 }
 
 @end

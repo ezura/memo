@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DrawLayerView.h"
 
-@interface AddInformationViewController : UIViewController <DrawLayerViewDelegate>
-
+@interface AddInformationViewController : UIViewController
 @end

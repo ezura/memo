@@ -11,8 +11,6 @@
 		4C06B1AD9B8C2802204109E2 /* Pods_memoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 028E6B66EFC993930FC74D05 /* Pods_memoTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */; };
 		FF0814AA1B50F10100C6671A /* ImageAnalyzer+Contour.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */; };
-		FF0814AD1B5172C100C6671A /* DishItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = FF0814AC1B5172C100C6671A /* DishItem.mm */; };
-		FF0814B01B51913D00C6671A /* DishData.m in Sources */ = {isa = PBXBuildFile; fileRef = FF0814AF1B51913D00C6671A /* DishData.m */; };
 		FF54593E1B3D20D600747C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54593D1B3D20D600747C07 /* main.m */; };
 		FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5459401B3D20D600747C07 /* AppDelegate.m */; };
 		FF5459441B3D20D600747C07 /* memo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF5459421B3D20D600747C07 /* memo.xcdatamodeld */; };
@@ -68,10 +66,6 @@
 		FF0814A61B50EF4000C6671A /* ImageAnalyzer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ImageAnalyzer.mm; path = Analyzer/ImageAnalyzer.mm; sourceTree = "<group>"; };
 		FF0814A81B50F10100C6671A /* ImageAnalyzer+Contour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ImageAnalyzer+Contour.h"; path = "Analyzer/ImageAnalyzer+Contour.h"; sourceTree = "<group>"; };
 		FF0814A91B50F10100C6671A /* ImageAnalyzer+Contour.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "ImageAnalyzer+Contour.mm"; path = "Analyzer/ImageAnalyzer+Contour.mm"; sourceTree = "<group>"; };
-		FF0814AB1B5172C100C6671A /* DishItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishItem.h; path = DishData/DishItem.h; sourceTree = "<group>"; };
-		FF0814AC1B5172C100C6671A /* DishItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DishItem.mm; path = DishData/DishItem.mm; sourceTree = "<group>"; };
-		FF0814AE1B51913D00C6671A /* DishData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DishData.h; path = DishData/DishData.h; sourceTree = "<group>"; };
-		FF0814AF1B51913D00C6671A /* DishData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DishData.m; path = DishData/DishData.m; sourceTree = "<group>"; };
 		FF5459381B3D20D600747C07 /* memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54593C1B3D20D600747C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF54593D1B3D20D600747C07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -324,10 +318,6 @@
 			children = (
 				FFE2A69C1B588F470010BACF /* Dish.h */,
 				FFE2A69D1B588F470010BACF /* Dish.m */,
-				FF0814AB1B5172C100C6671A /* DishItem.h */,
-				FF0814AC1B5172C100C6671A /* DishItem.mm */,
-				FF0814AE1B51913D00C6671A /* DishData.h */,
-				FF0814AF1B51913D00C6671A /* DishData.m */,
 			);
 			name = dish;
 			sourceTree = "<group>";
@@ -544,8 +534,6 @@
 				FF5D684C1B55E371008E35F1 /* ImageAnalyzer+Color.mm in Sources */,
 				FF0814AA1B50F10100C6671A /* ImageAnalyzer+Contour.mm in Sources */,
 				FF5459411B3D20D600747C07 /* AppDelegate.m in Sources */,
-				FF0814AD1B5172C100C6671A /* DishItem.mm in Sources */,
-				FF0814B01B51913D00C6671A /* DishData.m in Sources */,
 				FF54593E1B3D20D600747C07 /* main.m in Sources */,
 				FF6303FB1B3ED4E300FD3CBC /* AddInformationViewController.mm in Sources */,
 				FF5459441B3D20D600747C07 /* memo.xcdatamodeld in Sources */,

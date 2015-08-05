@@ -29,10 +29,10 @@
 }
 
 #pragma mark - set contents
-- (void)setContent:(DishItem*)content
+- (void)setContent:(Dish*)content
 {
-    self.colorView.backgroundColor = content.data.color;
-    self.dishImageView.image = content.data.dishImage;
+    self.colorView.backgroundColor = content.color;
+    self.dishImageView.image = content.image;
 }
 
 @end

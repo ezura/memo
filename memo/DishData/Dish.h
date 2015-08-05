@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+#import "EnclosedAreaColorPicker.h"
+
 @interface Dish : NSObject
 
+@property (nonatomic, strong) UIImage*  image;
+@property (nonatomic, strong) UIColor*  color;
+@property (nonatomic, assign) CGRect    rect;
+//@property (nonatomic, strong) NSString* lunchBoxId;
+
++ (instancetype)dishWithEnclosedAreaColorPickerResult:(EnclosedAreaColorPickerResult*)colorPickerResult;
 @end
