@@ -38,8 +38,6 @@
 		FF6303FE1B3EE13F00FD3CBC /* sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FF6303FD1B3EE13F00FD3CBC /* sample.jpg */; };
 		FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6304001B3EE54500FD3CBC /* DrawLayerView.m */; };
 		FF76447C1B4B999E00211B12 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FF76447B1B4B999E00211B12 /* libc++.dylib */; };
-		FF7BB0AE1B723EC700EF511F /* ColorDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */; };
-		FF7BB0AF1B723ED400EF511F /* ColorDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */; };
 		FF7BB0B11B7242E600EF511F /* ColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B01B7242E600EF511F /* ColorTests.m */; };
 		FF7BB0B41B72456900EF511F /* BasicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B31B72456900EF511F /* BasicColor.m */; };
 		FF7BB0B51B72456900EF511F /* BasicColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FF7BB0B31B72456900EF511F /* BasicColor.m */; };
@@ -108,8 +106,6 @@
 		FF6303FF1B3EE54500FD3CBC /* DrawLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DrawLayerView.h; path = AddInformation/DrawLayerView.h; sourceTree = "<group>"; };
 		FF6304001B3EE54500FD3CBC /* DrawLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DrawLayerView.m; path = AddInformation/DrawLayerView.m; sourceTree = "<group>"; };
 		FF76447B1B4B999E00211B12 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		FF7BB0AC1B723EC700EF511F /* ColorDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorDictionary.h; sourceTree = "<group>"; };
-		FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorDictionary.m; sourceTree = "<group>"; };
 		FF7BB0B01B7242E600EF511F /* ColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorTests.m; sourceTree = "<group>"; };
 		FF7BB0B21B72456900EF511F /* BasicColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicColor.h; sourceTree = "<group>"; };
 		FF7BB0B31B72456900EF511F /* BasicColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicColor.m; sourceTree = "<group>"; };
@@ -301,8 +297,6 @@
 		FF7BB0AB1B723E8D00EF511F /* ColorDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				FF7BB0AC1B723EC700EF511F /* ColorDictionary.h */,
-				FF7BB0AD1B723EC700EF511F /* ColorDictionary.m */,
 				FF7BB0B21B72456900EF511F /* BasicColor.h */,
 				FF7BB0B31B72456900EF511F /* BasicColor.m */,
 			);
@@ -545,7 +539,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF6304011B3EE54500FD3CBC /* DrawLayerView.m in Sources */,
-				FF7BB0AE1B723EC700EF511F /* ColorDictionary.m in Sources */,
 				FF0814A71B50EF4000C6671A /* ImageAnalyzer.mm in Sources */,
 				FF7BB0B41B72456900EF511F /* BasicColor.m in Sources */,
 				FF5D68501B56819A008E35F1 /* EnclosedAreaColorPicker.mm in Sources */,
@@ -570,7 +563,6 @@
 				FF7BB0B11B7242E600EF511F /* ColorTests.m in Sources */,
 				FF54595B1B3D20D600747C07 /* memoTests.m in Sources */,
 				FF7BB0B51B72456900EF511F /* BasicColor.m in Sources */,
-				FF7BB0AF1B723ED400EF511F /* ColorDictionary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

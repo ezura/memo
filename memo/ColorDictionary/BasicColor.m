@@ -1,3 +1,4 @@
+
 //
 //  BasicColor.m
 //  memo
@@ -9,6 +10,7 @@
 #import "BasicColor.h"
 
 @interface BasicColor()
+- (instancetype)_initWithColor:(NSDictionary*)color;
 
 @property(setter=setId:)   NSString* id;
 @property(setter=setRgb:)  UIColor*  rgb;
@@ -18,49 +20,86 @@
 
 @implementation BasicColor
 
++ (NSArray*)_Master
+{
+    // TODO: plist とかから読み込む
+    return @[
+                 @{
+                     @"rgb": [UIColor redColor],
+                     @"id": @1,
+                     @"name": @"red",
+                   },
+                 @{
+                     @"rgb": [UIColor orangeColor],
+                     @"id": @2,
+                     @"name": @"orange",
+                   },
+                 @{
+                     @"rgb": [UIColor greenColor],
+                     @"id": @3,
+                     @"name": @"green",
+                  },
+                 @{
+                     @"rgb": [UIColor yellowColor],
+                     @"id": @4,
+                     @"name": @"yellow",
+                   },
+                 @{
+                     @"rgb": [UIColor whiteColor],
+                     @"id": @5,
+                     @"name": @"white",
+                   },
+             ];
+}
+
+- (instancetype)_initWithColor:(NSDictionary*)color
+{
+    if (self = [super init]) {
+        self.rgb = color[@"rgb"];
+        self.id  = color[@"id"];
+        self.name = color[@"name"];
+    }
+    return self;
+}
+
++ (NSDictionary*)allBasicColor
+{
+    static NSMutableDictionary* colors;
+    
+    if (colors) {
+        return colors;
+    }
+
+    colors = @{}.mutableCopy;
+    for (NSDictionary* color in [BasicColor _Master]) {
+        colors[color[@"rgb"]] = [[BasicColor alloc] _initWithColor:color];
+    }
+    return colors;
+}
+
 + (instancetype)redColor
 {
-    BasicColor *color = [BasicColor new];
-    color.id          = @"1";
-    color.rgb         = [UIColor redColor];
-    color.name        = @"red";
-    return color;
+    return [BasicColor allBasicColor][[UIColor redColor]];
 }
 
 + (instancetype)orangeColor
 {
-    BasicColor *color = [BasicColor new];
-    color.id          = @"2";
-    color.rgb         = [UIColor orangeColor];
-    color.name        = @"orange";
-    return color;
+    return [BasicColor allBasicColor][[UIColor orangeColor]];
 }
 
 + (instancetype)greenColor
 {
-    BasicColor *color = [BasicColor new];
-    color.id          = @"3";
-    color.rgb         = [UIColor greenColor];
-    color.name        = @"green";
-    return color;
+    return [BasicColor allBasicColor][[UIColor greenColor]];
 }
 
 + (instancetype)yellowColor
 {
-    BasicColor *color = [BasicColor new];
-    color.id          = @"4";
-    color.rgb         = [UIColor yellowColor];
-    color.name        = @"yellow";
-    return color;
+    return [BasicColor allBasicColor][[UIColor yellowColor]];
 }
 
 + (instancetype)whiteColor
 {
-    BasicColor *color = [BasicColor new];
-    color.id          = @"5";
-    color.rgb         = [UIColor whiteColor];
-    color.name        = @"white";
-    return color;
+    return [BasicColor allBasicColor][[UIColor whiteColor]];
 }
 
 @end

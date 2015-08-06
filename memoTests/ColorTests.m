@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-#import "ColorDictionary.h"
+#import "BasicColor.h"
 
 @interface ColorTests : XCTestCase
 
@@ -27,12 +27,13 @@
     [super tearDown];
 }
 
-- (void)testConsultRedColor
+//- (void)testConsultRedColor
+- (void)testSameObject
 {
     BasicColor *color = [BasicColor redColor];
-    BasicColor* lookUpColor = [ColorDictionary lookUp:[UIColor redColor]];
+    BasicColor *color2 = [BasicColor redColor];
     
-    XCTAssertEqualObjects(color.rgb, lookUpColor.rgb);
+    XCTAssertEqualObjects(color, color2);
 }
 
 - (void)testExample {
