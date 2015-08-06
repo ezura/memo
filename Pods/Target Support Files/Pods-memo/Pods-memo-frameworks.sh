@@ -55,9 +55,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-memo/OMGHTTPURLRQ.framework'
   install_framework 'Pods-memo/PromiseKit.framework'
   install_framework 'Pods-memo/Realm.framework'
+  install_framework 'Pods-memo/Underscore_m.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-memo/OMGHTTPURLRQ.framework'
   install_framework 'Pods-memo/PromiseKit.framework'
   install_framework 'Pods-memo/Realm.framework'
+  install_framework 'Pods-memo/Underscore_m.framework'
 fi
