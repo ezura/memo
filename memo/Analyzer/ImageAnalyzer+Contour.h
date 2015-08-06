@@ -8,10 +8,10 @@
 
 #import "ImageAnalyzer.h"
 
-@interface ImageAnalyzer (ContourAnalyze)
+@interface ImageAnalyzer (Contour)
 
+cv::Rect computeContourRange(UIImage* contourImage);
 cv::Rect computeContourRange(const cv::Mat &contourImage);
 void createMaskFromContour(const cv::Mat &contour, cv::Mat &output);
-UIColor* computeColor(const cv::Mat &image);
 
 @end

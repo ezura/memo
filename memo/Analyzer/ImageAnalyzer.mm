@@ -42,4 +42,10 @@ UIImage *imageFromView(UIView *view)
     return capturedImage;
 }
 
+UIImage *clipImage(UIImage *image, cv::Rect rect)
+{
+    cv::Mat cvImage = matWithImage(image);
+    return MatToUIImage(cvImage(rect).clone());
+}
+
 @end

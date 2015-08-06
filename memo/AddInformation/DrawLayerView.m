@@ -14,7 +14,7 @@
 }
 
 - (id)init {
-    self = [super self];
+    self = [super init];
     if (self) {
         self.userInteractionEnabled = YES;
         self.backgroundColor = [UIColor clearColor];
@@ -60,7 +60,7 @@
     [self.delegate drawLayerView:self drawnImage:self.image];
 }
 
-+ (UIImage *) imageWithView:(UIView *)view
++ (UIImage *)imageWithView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
     [view.layer renderInContext:UIGraphicsGetCurrentContext()];

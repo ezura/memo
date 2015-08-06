@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <opencv2/opencv.hpp>
 
 typedef enum : NSUInteger {
     ImageAnalyzeErrorNone,
@@ -18,5 +19,15 @@ typedef enum : NSUInteger {
 
 cv::Mat matWithImage(UIImage* image);
 UIImage *imageFromView(UIView *view);
+
+/**
+ *  画像を切り抜き
+ *
+ *  @param image 切り抜く画像
+ *  @param rect  切り抜く範囲
+ *
+ *  @return 切り抜いた画像
+ */
+UIImage *clipImage(UIImage *image, cv::Rect rect);
 
 @end
