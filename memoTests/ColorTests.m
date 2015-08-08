@@ -11,6 +11,12 @@
 
 #import "BasicColor.h"
 
+@interface BasicColor()
+
+- (NSNumber*)_distance:(UIColor*)color;
+
+@end
+
 @interface ColorTests : XCTestCase
 
 @end
@@ -30,22 +36,38 @@
 //- (void)testConsultRedColor
 - (void)testSameObject
 {
-    BasicColor *color = [BasicColor redColor];
+    BasicColor *color1 = [BasicColor redColor];
     BasicColor *color2 = [BasicColor redColor];
     
-    XCTAssertEqualObjects(color, color2);
+    XCTAssertEqual(color1, color2);
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testCalcDistanceSameColor
+{
+    BasicColor *basicRedColor = [BasicColor redColor];
+    UIColor *redColor         = [UIColor redColor];
+    
+    XCTAssertEqualObjects([basicRedColor _distance:redColor], [NSNumber numberWithFloat:0.f]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+/**
+ *  近い色検索
+ *  strawberry	229	0	49
+ */
+- (void)testGetNearStrawberryColor
+{
+    UIColor *color = [UIColor colorWithRed:229.f/255.f green:0.f blue:49.f/255.f alpha:1];
+    XCTAssertEqualObjects([BasicColor near:color], [BasicColor redColor]);
+}
+
+/**
+ *  近い色検索
+ *  moss green	107	191	63
+ */
+- (void)testGetNearMossGreenColor
+{
+    UIColor *color = [UIColor colorWithRed:107.f/255.f green:191.f/255.f blue:63.f/255.f alpha:1];
+    XCTAssertEqualObjects([BasicColor near:color], [BasicColor greenColor]);
 }
 
 @end

@@ -10,7 +10,7 @@
 #import "BasicColor.h"
 
 @interface BasicColor()
-- (instancetype)_initWithColor:(NSDictionary*)color;
+- (instancetype)_initWithMaster:(NSDictionary*)color;
 
 @property(setter=setId:)   NSString* id;
 @property(setter=setRgb:)  UIColor*  rgb;
@@ -20,9 +20,10 @@
 
 @implementation BasicColor
 
-+ (NSArray*)_Master
++ (NSArray*)_Masters
 {
     // TODO: plist とかから読み込む
+    // TODO: rgb 表現方法変更
     return @[
                  @{
                      @"rgb": [UIColor redColor],
@@ -57,12 +58,12 @@
              ];
 }
 
-- (instancetype)_initWithColor:(NSDictionary*)color
+- (instancetype)_initWithMaster:(NSDictionary*)master
 {
     if (self = [super init]) {
-        self.rgb = color[@"rgb"];
-        self.id  = color[@"id"];
-        self.name = color[@"name"];
+        self.rgb  = master[@"rgb"];
+        self.id   = master[@"id"];
+        self.name = master[@"name"];
     }
     return self;
 }
@@ -75,48 +76,64 @@
         return colors;
     }
 
-    colors = @{}.mutableCopy;
-    for (NSDictionary* color in [BasicColor _Master]) {
-        [colors addObject:[[BasicColor alloc] _initWithColor:color]];
+    colors = @[].mutableCopy;
+    NSArray* masters = [BasicColor _Masters];
+    for (NSDictionary* master in masters) {
+        [colors addObject:[[BasicColor alloc] _initWithMaster:master]];
     }
     return colors;
 }
 
+- (UIColor*)toUIColor
+{
+    return self.rgb;
+}
+
 #pragma mark - return basic color
-//+ (instancetype)near:(UIColor*)color
-//{
-//}
++ (instancetype)near:(UIColor*)color
+{
+    BasicColor *nearestColor = nil;
+    NSNumber *minDistance = [NSNumber numberWithFloat:MAXFLOAT];
+    for (BasicColor* basicColor in [BasicColor allBasicColor]) {
+        NSNumber *distance = [basicColor _distance:color];
+        if ([distance compare:minDistance] == NSOrderedAscending) {
+            minDistance = distance;
+            nearestColor = basicColor;
+        }
+    }
+    return nearestColor;
+}
 
 #pragma mark representative color
-//+ (instancetype)redColor
-//{
-//    return [BasicColor allBasicColor][[UIColor redColor]];
-//}
-//
-//+ (instancetype)orangeColor
-//{
-//    return [BasicColor allBasicColor][[UIColor orangeColor]];
-//}
-//
-//+ (instancetype)greenColor
-//{
-//    return [BasicColor allBasicColor][[UIColor greenColor]];
-//}
-//
-//+ (instancetype)yellowColor
-//{
-//    return [BasicColor allBasicColor][[UIColor yellowColor]];
-//}
-//
-//+ (instancetype)whiteColor
-//{
-//    return [BasicColor allBasicColor][[UIColor whiteColor]];
-//}
-//
-//+ (instancetype)blackColor
-//{
-//    return [BasicColor allBasicColor][[UIColor blackColor]];
-//}
++ (instancetype)redColor
+{
+    return [BasicColor _colorName:@"red"];
+}
+
++ (instancetype)orangeColor
+{
+    return [BasicColor _colorName:@"orange"];
+}
+
++ (instancetype)greenColor
+{
+    return [BasicColor _colorName:@"green"];
+}
+
++ (instancetype)yellowColor
+{
+    return [BasicColor _colorName:@"yellow"];
+}
+
++ (instancetype)whiteColor
+{
+    return [BasicColor _colorName:@"white"];
+}
+
++ (instancetype)blackColor
+{
+    return [BasicColor _colorName:@"black"];
+}
 
 #pragma mark - compute
 /**
@@ -130,7 +147,7 @@
 {
     CGFloat colorRgb[4];
     CGFloat selfRgb[4];
-    UIColor* selfColor = self.rgb;
+    UIColor* selfColor = [self toUIColor];
     
     if(! [color getRed:&colorRgb[0] green:&colorRgb[1] blue:&colorRgb[2] alpha:&colorRgb[3]] ||
        ! [selfColor getRed:&selfRgb[0] green:&selfRgb[1] blue:&selfRgb[2] alpha:&selfRgb[3]]) {
@@ -141,6 +158,24 @@
                        powf(colorRgb[1]-selfRgb[1], 2.f) +
                        powf(colorRgb[2]-selfRgb[2], 2.f);
     return [NSNumber numberWithFloat:distance];
+}
+
+
+/**
+ *  マスタ中にある色を名前から指定して取得する
+ *
+ *  @param colorName 色の名前
+ *
+ *  @return 引数の名前をもつ色
+ */
++ (BasicColor*)_colorName:(NSString*)colorName
+{
+    for (BasicColor* basicColor in [BasicColor allBasicColor]) {
+        if ([basicColor.name isEqual:colorName]) {
+            return basicColor;
+        }
+    }
+    return nil;
 }
 
 @end
