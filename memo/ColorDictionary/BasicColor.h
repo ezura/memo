@@ -11,8 +11,18 @@
 @interface BasicColor : NSObject
 
 @property(nonatomic, readonly) NSString* id;
-@property(nonatomic, readonly) UIColor*  rgb;
 @property(nonatomic, readonly) NSString* name;
+
+/**
+ *  マスタ中で一番近い色を返す
+ *
+ *  @param color 探す色
+ *
+ *  @return マスタ中で一番近い色
+ */
++ (instancetype)near:(UIColor*)color;
+
+- (UIColor*)toUIColor;
 
 + (instancetype)redColor;
 + (instancetype)orangeColor;
