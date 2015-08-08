@@ -77,34 +77,70 @@
 
     colors = @{}.mutableCopy;
     for (NSDictionary* color in [BasicColor _Master]) {
-        colors[color[@"rgb"]] = [[BasicColor alloc] _initWithColor:color];
+        [colors addObject:[[BasicColor alloc] _initWithColor:color]];
     }
     return colors;
 }
 
-+ (instancetype)redColor
-{
-    return [BasicColor allBasicColor][[UIColor redColor]];
-}
+#pragma mark - return basic color
+//+ (instancetype)near:(UIColor*)color
+//{
+//}
 
-+ (instancetype)orangeColor
-{
-    return [BasicColor allBasicColor][[UIColor orangeColor]];
-}
+#pragma mark representative color
+//+ (instancetype)redColor
+//{
+//    return [BasicColor allBasicColor][[UIColor redColor]];
+//}
+//
+//+ (instancetype)orangeColor
+//{
+//    return [BasicColor allBasicColor][[UIColor orangeColor]];
+//}
+//
+//+ (instancetype)greenColor
+//{
+//    return [BasicColor allBasicColor][[UIColor greenColor]];
+//}
+//
+//+ (instancetype)yellowColor
+//{
+//    return [BasicColor allBasicColor][[UIColor yellowColor]];
+//}
+//
+//+ (instancetype)whiteColor
+//{
+//    return [BasicColor allBasicColor][[UIColor whiteColor]];
+//}
+//
+//+ (instancetype)blackColor
+//{
+//    return [BasicColor allBasicColor][[UIColor blackColor]];
+//}
 
-+ (instancetype)greenColor
+#pragma mark - compute
+/**
+ *  RGB 空間上での平方ユークリッド距離を返す
+ *
+ *  @param color 距離を計算する対象の色
+ *
+ *  @return 引数の色と自身の平方ユークリッド距離
+ */
+- (NSNumber*)_distance:(UIColor*)color
 {
-    return [BasicColor allBasicColor][[UIColor greenColor]];
-}
-
-+ (instancetype)yellowColor
-{
-    return [BasicColor allBasicColor][[UIColor yellowColor]];
-}
-
-+ (instancetype)whiteColor
-{
-    return [BasicColor allBasicColor][[UIColor whiteColor]];
+    CGFloat colorRgb[4];
+    CGFloat selfRgb[4];
+    UIColor* selfColor = self.rgb;
+    
+    if(! [color getRed:&colorRgb[0] green:&colorRgb[1] blue:&colorRgb[2] alpha:&colorRgb[3]] ||
+       ! [selfColor getRed:&selfRgb[0] green:&selfRgb[1] blue:&selfRgb[2] alpha:&selfRgb[3]]) {
+        return nil;
+    }
+    
+    CGFloat distance = powf(colorRgb[0]-selfRgb[0], 2.f) +
+                       powf(colorRgb[1]-selfRgb[1], 2.f) +
+                       powf(colorRgb[2]-selfRgb[2], 2.f);
+    return [NSNumber numberWithFloat:distance];
 }
 
 @end
