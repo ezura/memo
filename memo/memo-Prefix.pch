@@ -21,4 +21,8 @@
 #import "DebugLog.h"
 // FIXME: 全部読み込まれてしまうので後で各ファイルに記述
 #import <PromiseKit/PromiseKit.h>
+
+#import "Underscore.h"
+#define _ Underscore
+
 #endif

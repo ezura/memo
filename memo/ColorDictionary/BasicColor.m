@@ -170,12 +170,11 @@
  */
 + (BasicColor*)_colorName:(NSString*)colorName
 {
-    for (BasicColor* basicColor in [BasicColor allBasicColor]) {
-        if ([basicColor.name isEqual:colorName]) {
-            return basicColor;
-        }
-    }
-    return nil;
+    return _.
+    array([BasicColor allBasicColor])
+    .find(^BOOL(BasicColor *color){
+        return [color.name isEqual:colorName];
+    });
 }
 
 @end
