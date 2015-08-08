@@ -49,6 +49,11 @@
                      @"id": @5,
                      @"name": @"white",
                    },
+                 @{
+                     @"rgb": [UIColor blackColor],
+                     @"id": @5,
+                     @"name": @"black",
+                   },
              ];
 }
 
@@ -62,9 +67,9 @@
     return self;
 }
 
-+ (NSDictionary*)allBasicColor
++ (NSArray*)allBasicColor
 {
-    static NSMutableDictionary* colors;
+    static NSMutableArray* colors;
     
     if (colors) {
         return colors;
