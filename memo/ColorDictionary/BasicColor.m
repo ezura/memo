@@ -177,4 +177,28 @@
     });
 }
 
+- (id)objectAtIndexedSubscript:(NSUInteger)idx
+{
+    return @"3";
+}
+
+- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx
+{
+    
+}
+
+- (id)objectForKeyedSubscript:(id)key
+{
+    return @"10";
+}
+
+- (void)setObject:(id)anObject forKeyedSubscript:(id <NSCopying>)aKey
+{
+    
+}
+
+ -(void)test
+{
+}
+
 @end

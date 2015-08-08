@@ -39,6 +39,12 @@
     BasicColor *color1 = [BasicColor redColor];
     BasicColor *color2 = [BasicColor redColor];
     
+    id arrayTest = color1[1];
+    id dicTest   = color1[@"1"];
+    color1[1]   = @"1";
+    color1[@1]  = @"2";
+    
+    
     XCTAssertEqual(color1, color2);
 }
 

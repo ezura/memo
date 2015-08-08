@@ -29,4 +29,9 @@
 + (instancetype)greenColor;
 + (instancetype)yellowColor;
 
+- (id)objectAtIndexedSubscript:(NSUInteger)idx;
+- (void)setObject:(id)obj atIndexedSubscript:(NSUInteger)idx;
+- (id)objectForKeyedSubscript:(id)key;
+- (void)setObject:(id)anObject forKeyedSubscript:(id <NSCopying>)aKey;
+
 @end
