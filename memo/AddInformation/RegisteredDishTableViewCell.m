@@ -7,6 +7,7 @@
 //
 
 #import "RegisteredDishTableViewCell.h"
+#import "BasicColor.h"
 
 @interface RegisteredDishTableViewCell()
 
@@ -31,7 +32,7 @@
 #pragma mark - set contents
 - (void)setContent:(Dish*)content
 {
-    self.colorView.backgroundColor = content.color;
+    self.colorView.backgroundColor = [BasicColor near:content.color].toUIColor;
     self.dishImageView.image = content.image;
 }
 
