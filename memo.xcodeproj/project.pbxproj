@@ -17,7 +17,6 @@
 		FF54594A1B3D20D600747C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF5459481B3D20D600747C07 /* Main.storyboard */; };
 		FF54594C1B3D20D600747C07 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF54594B1B3D20D600747C07 /* Images.xcassets */; };
 		FF54594F1B3D20D600747C07 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF54594D1B3D20D600747C07 /* LaunchScreen.xib */; };
-		FF54595B1B3D20D600747C07 /* memoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF54595A1B3D20D600747C07 /* memoTests.m */; };
 		FF54596B1B3E8AEE00747C07 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596A1B3E8AEE00747C07 /* opencv2.framework */; };
 		FF54596D1B3E8CB300747C07 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596C1B3E8CB300747C07 /* Accelerate.framework */; };
 		FF54596F1B3E8CBB00747C07 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF54596E1B3E8CBB00747C07 /* AssetsLibrary.framework */; };
@@ -79,7 +78,6 @@
 		FF54594E1B3D20D600747C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FF5459541B3D20D600747C07 /* memoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5459591B3D20D600747C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FF54595A1B3D20D600747C07 /* memoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = memoTests.m; sourceTree = "<group>"; };
 		FF54596A1B3E8AEE00747C07 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = Frameworks/opencv2.framework; sourceTree = "<group>"; };
 		FF54596C1B3E8CB300747C07 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		FF54596E1B3E8CBB00747C07 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -236,7 +234,6 @@
 		FF5459571B3D20D600747C07 /* memoTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF54595A1B3D20D600747C07 /* memoTests.m */,
 				FF5459581B3D20D600747C07 /* Supporting Files */,
 				FF7BB0B01B7242E600EF511F /* ColorTests.m */,
 			);
@@ -561,7 +558,6 @@
 			files = (
 				FFBB3FE81B6DE1C40014C5A3 /* EnclosedAreaColorPickerResult.m in Sources */,
 				FF7BB0B11B7242E600EF511F /* ColorTests.m in Sources */,
-				FF54595B1B3D20D600747C07 /* memoTests.m in Sources */,
 				FF7BB0B51B72456900EF511F /* BasicColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
